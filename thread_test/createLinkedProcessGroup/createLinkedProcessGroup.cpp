@@ -25,7 +25,8 @@ int main()
 
             if(i == 1) {
                 //将第二个子进程加入到 group1中
-                setpgid(pid, group1);
+                //setpgid(pid, group1);
+                setpgid(pid, pid);
             }
 
             // 在进程链中，父进程操作完退出循环
@@ -39,7 +40,8 @@ int main()
 
             if(i == 1) {
                 //将第二个子进程加入到 group1中
-                setpgid(getpid(), group1);
+                //setpgid(getpid(), group1);
+                setpgid(getpid(), getpid());
             }
         }
     }
