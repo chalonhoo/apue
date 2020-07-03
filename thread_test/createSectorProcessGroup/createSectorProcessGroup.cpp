@@ -8,7 +8,8 @@ int main(void)
 {
 
     //创建进程组，组长进程为父进程
-    setpgid(getpid(), getpid());
+    //由于从shell启动会创建一个单独的进程组，个人认为这里可以不用设置也可以
+    //setpgid(getpid(), getpid());
 
     /* 组1 */
     // 或 pid_t group1 = getpgid(0);
